@@ -50,6 +50,6 @@ const app = new Vue({
     router,
     store,
     mounted() {
-
+        this.$store.dispatch("loadSamples")
     }
 });

@@ -161,9 +161,6 @@ export default {
         }
 
     },
-    mounted() {
-        this.$store.dispatch("loadSamples")
-    }
 }
 </script>
 
