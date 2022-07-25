@@ -16,7 +16,12 @@ class ProtocolController extends BaseController
             'description' => 'required',
             'recommendation' => 'required',
             'conclusion' => 'required'
-        ]);
+        ],
+            [
+                'description.required' => 'Поля шаблона не должно быть пустым',
+                'recommendation.required' => 'Поля шаблона не должно быть пустым',
+                'conclusion.required' => 'Поля шаблона не должно быть пустым'
+            ]);
 
         Protocol::create($validated);
 

@@ -20,6 +20,9 @@ class SampleController extends BaseController
         $validated = $request->validate([
             'text' => 'required',
             'parentId' => 'nullable',
+        ],
+        [
+            'text.required' => 'Поля шаблона не должно быть пустым'
         ]);
 
         Sample::create($validated);

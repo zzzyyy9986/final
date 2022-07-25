@@ -116,6 +116,12 @@ export default {
                 this.text = ""
                 this.$store.commit("setSuccessMsg","Успешно добавили шаблон")
             })
+          .catch((error) => {
+            if(error.response){
+              let msg = Object.keys(error.response.data.errors).map((key,index,ar) => ar[key] ).join("")
+              this.$store.commit("setErrorMsg",Object.values(error.response.data.errors).map(el => el[0]).join(";"))
+            }
+          })
         },
         next(el, ar) {
             if (el.children.length) {
