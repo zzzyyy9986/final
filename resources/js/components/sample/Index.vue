@@ -18,6 +18,20 @@
                             </div>
                         </div>
                     </template>
+                  <template slot="noOptions">
+                    <div class="d-flex justify-content-between">
+                      <div class="option__desc">
+                        <span class="option__small">Добавьте корневой элемент(введите его в следующем поле)</span>
+                      </div>
+                    </div>
+                  </template>
+                  <template slot="noResult">
+                    <div class="d-flex justify-content-between">
+                      <div class="option__desc">
+                        <span class="option__small">Ничего не найдено. Убедитель в правильности данных</span>
+                      </div>
+                    </div>
+                  </template>
                 </multiselect>
             </div>
             <div class="col-md-4 ">

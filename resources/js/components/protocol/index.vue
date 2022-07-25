@@ -24,10 +24,10 @@
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </div>
         </form>
-        <div class="col-md-4" v-if="samples.length">
+        <div class="col-md-4" v-if="samples.length" title="Двойной клик, чтобы выбрать шаблон">
             <tree-view id="my-tree" :initial-model="samples" :model-defaults="modelDefaults">
                 <template v-slot:text="{ model, customClasses }">
-                    <span class="mb-2" @dblclick="selectSample(model.text)">{{ model.text }}</span>
+                    <span  class="mb-2" @dblclick="selectSample(model.text)">{{ model.text }}</span>
                 </template>
             </tree-view>
         </div>
