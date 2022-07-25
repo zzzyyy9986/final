@@ -95,6 +95,7 @@ export default {
     },
     mounted() {
         this.selectedItem = ''
+        this.$store.dispatch("loadSamples")
     }
 }
 </script>
