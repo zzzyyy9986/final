@@ -1,5 +1,5 @@
 <template>
-  <div class="row" v-if="isSamplesLoaded">
+  <div class="row" >
     <form class="col-md-8" @submit.prevent="save">
       <div class="form-group mb-2">
         <input type="text" class="form-control" placeholder="Введите описание"
